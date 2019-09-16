@@ -4,6 +4,12 @@ This repo contains the source code for the following paper
 
 ## Introduction
 ![pipeline_figure](img/pipeline_figure.pdf "Pipeline System")
+<object data="https://github.com/easonnie/semanticRetrievalMRS/blob/master/img/pipeline_figure.pdf" type="application/pdf">
+    <embed src="https://github.com/easonnie/semanticRetrievalMRS/blob/master/img/pipeline_figure.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="http://yoursite.com/the.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
+
 
 ## Results
 
