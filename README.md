@@ -12,7 +12,8 @@ Each neural component is trained by sampling data using upstream components and 
 ![pipeline_figure](img/pipeline_figure.png "Pipeline System")
 
 
-More importantly, the system is used as a testbed to analyze and reveal the importance of intermediate semantic retrieval and how the retrieval performance will affect the downstream tasks on different metrics.
+**More importantly**, the system is used as a testbed to analyze and reveal the importance of intermediate semantic retrieval and how the retrieval performance will affect the downstream tasks on different metrics.
+We hope the analysis could be insightful and inspiring for future development on OpenDomain QA/NLI systems. 
 ## Results
 
 
