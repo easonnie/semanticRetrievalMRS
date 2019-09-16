@@ -1,2 +1,15 @@
 # semanticRetrievalMRS
-This is the repo for the paper "Revealing the Importance of Semantic Retrievalfor Machine Reading at Scale Yixin Nie, Songhe Wang, Mohit Bansal EMNLP 2019". (Coming soon)
+This repo contains the source code for the following paper 
+* Yixin Nie, Songhe Wang, Mohit Bansal, *Revealing the Importance of Semantic Retrievalfor Machine Reading at Scale.* in EMNLP, 2019.". (PDF Coming soon)
+
+## Introduction
+
+
+## Results
+
+
+## Usage
+(Coming Soon)
+
+## Intermediate Retrieval Data
+(Coming Soon)
