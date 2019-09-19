@@ -18,7 +18,14 @@ We hope the analysis could be insightful and inspiring for future development on
 
 ## Requirement
 * Python 3.6
+* torch 1.0.1.post2
+* allennlp 0.8.1
+* pytorch-pretrained-bert 0.4.0
+* tqdm
+* sqlitedict
 * (More coming)
+
+Packages with different versions might be compatible but are not tested.
 
 ## Usage
 #### Download Data
@@ -41,7 +48,17 @@ cd data
 wget https://nlp.stanford.edu/projects/hotpotqa/enwiki-20171001-pages-meta-current-withlinks-processed.tar.bz2
 wget https://nlp.stanford.edu/projects/hotpotqa/enwiki-20171001-pages-meta-current-withlinks-abstracts.tar.bz2
 ```
-(Coming Soon)
+
+##### Preprocessed Wiki
+We preprocessed the Wikipedia dump and saved it into a sqlite-database.
+The database can be downloaded from [preprocessed-wiki-db](https://drive.google.com/file/d/10sekXDgoFUN42fOCL3Lpcn47Jc7cJ8y-/view?usp=sharing)
+
+(More Coming Soon)
 
 ## Intermediate Retrieval Data
 (Coming Soon)
+
+## Citation
+```bash
+
+```
