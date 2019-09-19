@@ -60,7 +60,7 @@ The database can be downloaded from [preprocessed-wiki-db](https://drive.google.
 
 ## Citation
 ```bash
-@inproceedings{ynie2019,
+@inproceedings{ynie2019revealing,
   title     = {Revealing the Importance of Semantic Retrieval for Machine Reading at Scale},
   author    = {Yixin Nie, Songhe Wang, Mohit Bansal},
   booktitle = {EMNLP},
