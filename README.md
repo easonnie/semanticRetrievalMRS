@@ -55,6 +55,12 @@ The database can be downloaded from [preprocessed-wiki-db](https://drive.google.
 
 (More Coming Soon)
 
+#### Folder Structure
+In order to run further experiments, try to match your repository folder with the one below.
+```bash
+
+```
+
 ## Intermediate Retrieval Data
 (Coming Soon)
 
