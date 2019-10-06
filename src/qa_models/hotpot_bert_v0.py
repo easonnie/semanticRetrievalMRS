@@ -534,7 +534,6 @@ def model_go(sent_filter_value, sent_top_k=5):
                         if not debug:
                             save_file_name = f'ema_i({update_step})|e({epoch_i})' \
                                 f'|j_f1({joint_f1})|j_em({joint_em})|seed({seed})'
-
                             # print(save_file_name)
                             logging_agent.incorporate_results({}, save_file_name, logging_item)
                             logging_agent.logging_to_file(Path(file_path_prefix) / "log.json")
@@ -545,7 +544,8 @@ def model_go(sent_filter_value, sent_top_k=5):
 
 
 if __name__ == '__main__':
-    model_path = config.PRO_ROOT / "saved_models/05-04-11:28:22_hotpot_v0_qa_(s_top_k:5,s_fv:0.5,qa_layer:2)/ema_i(14000)|e(4)|j_f1(0.4915947771847026)|j_em(0.26603646185010127)|seed(12)"
+    model_go(sent_filter_value=5, sent_top_k=5)
+    # model_path = config.PRO_ROOT / "saved_models/05-04-11:28:22_hotpot_v0_qa_(s_top_k:5,s_fv:0.5,qa_layer:2)/ema_i(14000)|e(4)|j_f1(0.4915947771847026)|j_em(0.26603646185010127)|seed(12)"
     # data_files = [
     #     config.PRO_ROOT / "data/p_hotpotqa/hotpot_p_level_effects/hotpot_s_level_dev_results_top_k_doc_1.jsonl",
     #     config.PRO_ROOT / "data/p_hotpotqa/hotpot_p_level_effects/hotpot_s_level_dev_results_top_k_doc_2.jsonl",
@@ -560,9 +560,9 @@ if __name__ == '__main__':
     #     config.PRO_ROOT / "data/p_hotpotqa/hotpot_p_level_effects/hotpot_s_level_dev_results_top_k_doc_11.jsonl",
     # ]
     # data_files = [
-    data_file = config.PRO_ROOT / "data/p_hotpotqa/hotpot_p_level_effects/hotpot_s_level_dev_results_top_k_doc_5.jsonl"
+    # data_file = config.PRO_ROOT / "data/p_hotpotqa/hotpot_p_level_effects/hotpot_s_level_dev_results_top_k_doc_5.jsonl"
     # ]
-    eval_model(model_path, data_file, filter_value=0.5)
+    # eval_model(model_path, data_file, filter_value=0.5)
     # for d_file in data_files:
     #     eval_model(model_path, d_file)
     # for sent_top_k in [0, 2, 4, 6, 8, 10]:

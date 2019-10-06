@@ -23,11 +23,17 @@ We hope the analysis could be insightful and inspiring for future development on
 * pytorch-pretrained-bert 0.4.0
 * tqdm
 * sqlitedict
+* lxml
 * (More coming)
+
+Download spacy em-package after installing allennlp.
+```
+python -m spacy download en_core_web_sm
+```
 
 Packages with different versions might be compatible but are not tested.
 
-## Usage
+## Preparation
 #### Download Data
 ##### Dataset
 In the repo directory, run the following commands. 
@@ -41,7 +47,7 @@ wget http://curtis.ml.cmu.edu/datasets/hotpot/hotpot_dev_distractor_v1.json
 wget http://curtis.ml.cmu.edu/datasets/hotpot/hotpot_dev_fullwiki_v1.json
 wget http://curtis.ml.cmu.edu/datasets/hotpot/hotpot_test_fullwiki_v1.json
 ```
-##### Wikipedia
+##### Wikipedia (Optional)
 In the repo directory, run the following commands. 
 ```bash
 cd data
@@ -53,7 +59,19 @@ wget https://nlp.stanford.edu/projects/hotpotqa/enwiki-20171001-pages-meta-curre
 We preprocessed the Wikipedia dump and saved it into a sqlite-database.
 The database can be downloaded from [preprocessed-wiki-db](https://drive.google.com/file/d/10sekXDgoFUN42fOCL3Lpcn47Jc7cJ8y-/view?usp=sharing)
 
-(More Coming Soon)
+In the repo root directory, create the folder for the processed wikidb:
+```
+mkdir -p data/processed/reverse_indexing
+```
+Then, move the downloaded db-file into the above folder `data/processed/reverse_indexing/whole_for_rindex.db`.
+
+#### Intermediate Retrieval Data
+We also provide intermediate retrieval data that you can directly use for any downstream.
+
+##### HotpotQA
+
+##### FEVER
+
 
 #### Folder Structure
 In order to run further experiments, try to match your repository folder with the one below.
@@ -61,8 +79,7 @@ In order to run further experiments, try to match your repository folder with th
 
 ```
 
-## Intermediate Retrieval Data
-(Coming Soon)
+
 
 ## Citation
 ```bash
