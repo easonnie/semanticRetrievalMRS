@@ -57,7 +57,7 @@ wget https://nlp.stanford.edu/projects/hotpotqa/enwiki-20171001-pages-meta-curre
 
 ##### Preprocessed Wiki
 We preprocessed the Wikipedia dump and saved it into a sqlite-database.
-The database can be downloaded from [preprocessed-wiki-db](https://drive.google.com/file/d/10sekXDgoFUN42fOCL3Lpcn47Jc7cJ8y-/view?usp=sharing)
+The database can be downloaded from [whole_for_rindex.db](https://drive.google.com/file/d/10sekXDgoFUN42fOCL3Lpcn47Jc7cJ8y-/view?usp=sharing).
 
 In the repo root directory, create the folder for the processed wikidb:
 ```
@@ -69,15 +69,73 @@ Then, move the downloaded db-file into the above folder `data/processed/reverse_
 We also provide intermediate retrieval data that you can directly use for any downstream.
 
 ##### HotpotQA
-
+Download the intermediate paragraph and sentence level results using the command below.
+```
+bash scripts/intermediate_retri_hotpot.sh
+```
 ##### FEVER
-
+(Coming)
 
 #### Folder Structure
-In order to run further experiments, try to match your repository folder with the one below.
+In order to run further experiments, your repository folder should be similar to the one below.
 ```bash
-
+.
+├── data
+│   ├── hotpotqa
+│   │   ├── hotpot_dev_distractor_v1.json
+│   │   ├── hotpot_dev_fullwiki_v1.json
+│   │   ├── hotpot_test_fullwiki_v1.json
+│   │   └── hotpot_train_v1.1.json
+│   ├── p_hotpotqa
+│   │   ├── hotpotqa_paragraph_level
+│   │   ├── hotpotqa_qa_results
+│   │   └── hotpotqa_sentence_level
+│   └── processed
+│       └── reverse_indexing
+│           └── whole_for_rindex.db
+├── ENV
+├── LICENSE
+├── README.md
+├── scripts
+│   └── intermediate_retri_hotpot.sh
+├── setup.sh
+└── src
+    ├── bert_model_variances
+    ├── build_rindex
+    ├── config.py
+    ├── data_utils
+    ├── evaluation
+    ├── fever_doc_retri
+    ├── fever_eval
+    ├── fever_models
+    ├── fever_sampler
+    ├── fever_utils
+    ├── flint
+    ├── hotpot_content_selection
+    ├── hotpot_data_analysis
+    ├── hotpot_doc_retri
+    ├── hotpot_eval
+    ├── hotpot_fact_selection_sampler
+    ├── inspect_wikidump
+    ├── multi_task_retrieval
+    ├── neural_modules
+    ├── open_domain_sampler
+    ├── qa_models
+    ├── span_prediction_task_utils
+    ├── squad_models
+    ├── utils
+    └── wiki_util
 ```
+
+## Training
+##### Train final HotpotQA Model
+Now, you can run the following command in the repo root directory to train a QA model on HotpotQA data:
+```
+source setup.sh
+python src/qa_models/hotpot_bert_v0.py
+```
+
+Note: You can ignore the potential error prompts.
 
 
 
