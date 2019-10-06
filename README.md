@@ -135,6 +135,8 @@ source setup.sh
 python src/qa_models/hotpot_bert_v0.py
 ```
 
+The model checkpoints will be saved in `saved_models` directory.
+
 Note: You can ignore the potential error prompts.
 
 
