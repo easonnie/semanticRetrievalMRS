@@ -144,9 +144,9 @@ Note: You can ignore the potential error prompts.
 ## Citation
 ```bash
 @inproceedings{ynie2019revealing,
+  booktitle= {2019 Conference on Empirical Methods in Natural Language Processing and 9th International Joint Conference on Natural Language Processing ({EMNLP-IJCNLP})},
   title     = {Revealing the Importance of Semantic Retrieval for Machine Reading at Scale},
   author    = {Yixin Nie, Songhe Wang, Mohit Bansal},
-  booktitle={2019 Conference on Empirical Methods in Natural Language Processing and 9th International Joint Conference on Natural Language Processing ({EMNLP-IJCNLP})},
   year      = {2019}
 }
 ```
